@@ -1,13 +1,13 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
 
-$con = mysql_connect("127.0.0.1:3307","lachelle","rlqB5EtC");
+$con = mysql_connect("localhost:/tmp/mysql/ona.sock","anya","yCq6dSl9");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("courtney", $con);
+mysql_select_db("ona", $con);
 
 if (isset($_POST['Content'])) {
 	if ($content = $_POST['Content']) {
