@@ -1,13 +1,13 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
 
-$con = mysql_connect("localhost:/tmp/mysql/sherise.sock","pok","H9LTaBoU");
+$con = mysql_connect("localhost:/tmp/mysql/omega.sock","pearl","EOTZ4dAm");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("sherise", $con);
+mysql_select_db("omega", $con);
 $sql = "CREATE TABLE IF NOT EXISTS Message (Content text)";
 mysql_query($sql,$con);
 
