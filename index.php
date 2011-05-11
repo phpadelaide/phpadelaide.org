@@ -4,6 +4,7 @@
 // $con = mysql_connect("localhost:/tmp/mysql/ona.sock","anya","yCq6dSl9");
 // $con = mysql_connect("127.0.0.1:3307","anya","yCq6dSl9");
 
+/*
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
@@ -24,6 +25,7 @@ if (isset($_POST['Content'])) {
 }
 
 ?>
+*/
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
