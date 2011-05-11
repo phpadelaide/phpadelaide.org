@@ -1,7 +1,9 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
 
-$con = mysql_connect("localhost:/tmp/mysql/ona.sock","anya","yCq6dSl9");
+// $con = mysql_connect("localhost:/tmp/mysql/ona.sock","anya","yCq6dSl9");
+$con = mysql_connect("127.0.0.1:3307","anya","yCq6dSl9");
+
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
