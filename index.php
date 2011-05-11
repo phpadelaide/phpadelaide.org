@@ -45,7 +45,8 @@ if (isset($_POST['Content'])) {
 				</div>
 				<input class="btn" type="image" value="" src="images/btn.png" border="0" name="btn">
 				<div class="message-box">
-					<?					
+					<?
+					/*					
 					$count  = 0;
 					$cssClass  = array("yellow", "orange");
 					$result = mysql_query("SELECT * FROM Message");
@@ -75,6 +76,7 @@ if (isset($_POST['Content'])) {
 					
 					
 					mysql_close($con);
+					*/
 					?>
 				</div>
 			</form>
