@@ -18,7 +18,7 @@ form,input																					{margin:0;}
 .content .border 																			{margin:0 auto; padding:5px 0 0; background:#3E3E3E; width:486px; height:125px; border:1px solid #4F4F4F;}
 .content .btn																				{margin:20px auto; padding:0; display:block;}
 .content .message-box																		{margin:0 auto; padding:4px 0 0; width:498px; background:url('../images/lines.png') repeat-y 0 0;}
-.content .message-box .message																{margin:0 auto 60px; padding:10px; color:#4A4A4C; font-size:15px; line-height:18px; width:401px; position:relative;}
+.content .message-box .message																{margin:0 auto 60px; padding:10px; color:#4A4B4C; font-size:15px; line-height:18px; width:401px; position:relative;}
 .content .message-box .message.yellow														{background:url('../images/yellow.png') repeat-y 0 0;}
 .content .message-box .message.yellow .top													{width:421px; height:4px; display:block; position:absolute; top:-4px; left:0px; background:url('../images/yellow-top.png') no-repeat 0 0;}
 .content .message-box .message.yellow .bottom												{width:421px; height:20px; display:block; position:absolute; bottom:-20px; left:0px; background:url('../images/yellow-bottom.png') no-repeat 0 0;}
