@@ -1,24 +1,27 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
 $noDatabase = true;
-$con = mysql_connect($_SERVER[db_host],$_SERVER[db_user],$_SERVER[db_pass]);
-if (!$con)
-  {
-  $noDatabase = true;
-  die('Could not connect: ' . mysql_error());
+if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['db_pass'])) {
+  $con = mysql_connect($_SERVER['db_host'],$_SERVER['db_user'],$_SERVER['db_pass']);
+  if (!$con)
+    {
+    $noDatabase = true;
+    die('Could not connect: ' . mysql_error());
+    }
+
+  mysql_select_db($_SERVER['db_name'], $con);
+
+  if (isset($_POST['Content'])) {
+  	if ($content = $_POST['Content']) {
+  		$sql="INSERT INTO Message (Content)
+  		VALUES
+  		('$content')";
+
+  		mysql_query($sql,$con);
+  	}
   }
-
-mysql_select_db($_SERVER[db_name], $con);
-
-if (isset($_POST['Content'])) {
-	if ($content = $_POST['Content']) {
-		$sql="INSERT INTO Message (Content)
-		VALUES
-		('$content')";
-
-		mysql_query($sql,$con);
-	}
 }
+
 
 ?>
 
