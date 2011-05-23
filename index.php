@@ -4,7 +4,7 @@
 $con = mysql_connect("localhost:/tmp/mysql/ona.sock","anya","yCq6dSl9");
 if (!$con)
   {
-  $noDatabase = true
+  $noDatabase = true;
   die('Could not connect: ' . mysql_error());
   }
 
@@ -40,8 +40,9 @@ if (isset($_POST['Content'])) {
 		    <div class="box">
 		      <p>We were unable to locate your database. You can create one in your <a href="#link">admin panel</a>, then simply set the following global vars to your database’s credentials. You do so via the <a href="#link">Global Vars</a> tab in the admin panel:</p>
 		      <p class="indent">db_name = &lsaquo;your-db-name&rsaquo;</p>
-		      <p class="indent">db_pass = &lsaquo;your-db-password&rsaquo;</p>
 		      <p class="indent">db_host = &lsaquo;your-db-host&rsaquo;</p>
+		      <p class="indent">db_user = &lsaquo;your-db-user&rsaquo;</p>
+		      <p class="indent">db_pass = &lsaquo;your-db-password&rsaquo;</p>
 		      <p>No need to move in haste, the universe is patient.</p>
 		    </div>
 		  <? else: ?>
