@@ -1,6 +1,6 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
-
+$noDatabase = false;
 $con = mysql_connect($_SERVER[db_host],$_SERVER[db_user],$_SERVER[db_pass]);
 if (!$con)
   {
