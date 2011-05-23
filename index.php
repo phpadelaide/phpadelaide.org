@@ -1,14 +1,14 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
 
-$con = mysql_connect("localhost:/tmp/mysql/ona.sock","anya","yCq6dSl9");
+$con = mysql_connect($_SERVER[db_host],$_SERVER[db_user],$_SERVER[db_pass]);
 if (!$con)
   {
   $noDatabase = true;
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("ona", $con);
+mysql_select_db($_SERVER[db_name], $con);
 
 if (isset($_POST['Content'])) {
 	if ($content = $_POST['Content']) {
