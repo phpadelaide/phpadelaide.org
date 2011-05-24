@@ -12,7 +12,7 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
 
   if (isset($_POST['Content'])) {
     // Create Table if not exist
-    $sql = 'CREATE TABLE IF NOT EXIST `Message` (`Content` text NOT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8';
+    $sql = 'CREATE TABLE IF NOT EXISTS `Message` (`Content` text NOT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8';
     mysql_query($sql, $con);
 
     if ($content = $_POST['Content']) {
