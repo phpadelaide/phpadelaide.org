@@ -16,7 +16,7 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
   	if ($content = $_POST['Content']) {
   		$sql="INSERT INTO Message (Content)
   		VALUES
-  		('$content')";
+  		('" . mysql_real_escape_string($content, $con) . "')";
 
   		mysql_query($sql,$con);
   	}
@@ -59,7 +59,7 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
   					<?					
   					$count  = 0;
   					$cssClass  = array("yellow", "orange");
-  					$result = mysql_query("SELECT * FROM Message");
+  					$result = mysql_query("SELECT * FROM Message", $con);
   					$valAr = array();
 
   					// Pull values out of db and put in array
