@@ -9,6 +9,7 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
     die('Could not connect: ' . mysql_error());
     }
 
+  $noDatabase = false;
   mysql_select_db($_SERVER['db_name'], $con);
 
   if (isset($_POST['Content'])) {
