@@ -58,19 +58,19 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
             <?          
             $count  = 0;
             $cssClass  = array("yellow", "orange");
-            $result = mysql_query("SELECT * FROM Message", $con);
+            $result = mysql_query("SELECT * FROM `Message`", $con);
             $valAr = array();
 
             // Pull values out of db and put in array
-            while($row = mysql_fetch_array($result))
+            while ($result and $row = mysql_fetch_array($result))
             {
               array_push($valAr, $row['Content']);
             }
 
-            // Reverse arry and print values as html
+            // Reverse array and print values as html
             $valAr = array_reverse( $valAr );
             $len = count($valAr);
-            for ($i=0; $i < $len; $i++) { 
+            for ($i = 0; $i < $len; $i++) { 
               echo  "<div class='message " . $cssClass[$count] . "'>";
               echo  "  <span class='top'></span>";
               echo  $valAr[$i];
@@ -78,7 +78,7 @@ if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['
               echo  "</div>";
 
               $count++;
-              if( $count == ( count($cssClass) ) ){
+              if ($count == (count($cssClass))){
                 $count = 0;
               }
             }
