@@ -1,6 +1,7 @@
 <?php
 // yeah... we know. This is a dummy app, cut some slack
 $noDatabase = true;
+var_dump($_SERVER);
 if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['db_pass'])) {
   $con = mysql_connect($_SERVER['db_host'],$_SERVER['db_user'],$_SERVER['db_pass']);
   if (!$con)
