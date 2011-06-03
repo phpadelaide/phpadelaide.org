@@ -16,11 +16,11 @@ form,input																					{margin:0;}
 /* CONTENT */
 .content																					{margin:0 auto; padding:480px 0 100px; width:960px;}
 .content .moon																				{margin:0 auto; width:246px; height:215px; background:url('../images/moon.png') no-repeat 0 0;}
-.content .box																				{margin:0 auto; padding:0; width:390px;}
+.content .box																				{margin:0 auto; padding:0; width:370px;}
 .content p																					{margin:0; padding:20px 0;}
 .content p.indent																			{padding:0; color:#fff; text-indent:20px;}
 .content a																					{margin:0; padding:0;}
-.content a:hover																			{color:#A9B366;}
+.content a:hover																			{color:#FFFFFF;}
 .content .textarea																			{margin:0 0 0 -6px; padding:10px; background:#3E3E3E; color:#ffc900; font-size:25px; width:476px; height:98px; background:transparent; border:1px solid #4F4F4F;}
 .content .border 																			{margin:0 auto; padding:5px 0 0; background:#3E3E3E; width:486px; height:125px; border:1px solid #4F4F4F;}
 .content .btn																				{margin:20px auto; padding:0; display:block;}
