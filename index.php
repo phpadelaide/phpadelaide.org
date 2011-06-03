@@ -1,5 +1,7 @@
 <?php
-// yeah... we know. This is a dummy app, cut some slack
+
+// yeah... we know :-O This is a dummy app, cut some slack
+
 $noDatabase = true;
 if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['db_pass']) && isset($_SERVER['db_name'])) {
   $con = mysql_connect($_SERVER['db_host'], $_SERVER['db_user'], $_SERVER['db_pass']);
