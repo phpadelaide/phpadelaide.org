@@ -3,14 +3,14 @@
 // yeah... we know :-O This is a dummy app, cut some slack
 
 $noDatabase = true;
-if (isset($_SERVER['db_host']) && isset($_SERVER['db_user']) && isset($_SERVER['db_pass']) && isset($_SERVER['db_name'])) {
-  $con = mysql_connect($_SERVER['db_host'], $_SERVER['db_user'], $_SERVER['db_pass']);
+if (isset($_SERVER['DB1_HOST']) && isset($_SERVER['DB1_USER']) && isset($_SERVER['DB1_PASS']) && isset($_SERVER['DB1_NAME'])) {
+  $con = mysql_connect($_SERVER['DB1_HOST'], $_SERVER['DB1_USER'], $_SERVER['DB1_PASS']);
   if (!$con) {
     $noDatabase = true;
     die('Could not connect: ' . mysql_error());
   }
 
-  $noDatabase = !mysql_select_db($_SERVER['db_name'], $con);
+  $noDatabase = !mysql_select_db($_SERVER['DB1_NAME'], $con);
 
   if (isset($_POST['Content'])) {
     // Create Table if not exist
