@@ -43,11 +43,7 @@ if (isset($_SERVER['DB1_HOST']) && isset($_SERVER['DB1_USER']) && isset($_SERVER
       <? if ($noDatabase): ?>
         <div class="moon"></div>
         <div class="box">
-          <p>We were unable to locate your database. You can create one in your <a href="http://dashboard.pagodabox.com" target="_blank">admin panel</a>, then simply set the following global vars to your database’s credentials. You do so via the <a href="http://guides.pagodabox.com/images/misc-demos/global-vars.png" target="_blank">Global Vars</a> tab in the admin panel:</p>
-          <p class="indent">db_name = &lsaquo;your-db-name&rsaquo;</p>
-          <p class="indent">db_host = &lsaquo;your-db-host&rsaquo;</p>
-          <p class="indent">db_user = &lsaquo;your-db-user&rsaquo;</p>
-          <p class="indent">db_pass = &lsaquo;your-db-password&rsaquo;</p>
+          <p>We were unable to locate your database. You can create one in your <a href="http://dashboard.pagodabox.com" target="_blank">admin panel</a>, Pagoda Box will automatically make the database credentials available tot his application.</p>
           <p>No need to move in haste, the universe is patient.</p>
         </div>
       <? else: ?>
