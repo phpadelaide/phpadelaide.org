@@ -105,4 +105,16 @@ header dt {
     color: #333;
 }
 
+/* iphone stuff */
 
+@media screen and (max-width: 320px) {
+    #content {
+        width: 240px
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    #content {
+        width: 320px
+    }
+}
