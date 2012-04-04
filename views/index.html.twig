@@ -1,0 +1,26 @@
+{% extends "page.html.twig" %}
+
+{% block title %}Welcome to PHP Adelaide{% endblock %}
+
+{% block content %}
+
+
+<h1>Welcome to PHP Adelaide</h1>
+
+<h2>Currently on twitter</h2>
+
+<ul class="tweets">
+{% for t in tweets %}
+<li>
+<blockquote>
+    <p>{{ t.text }}</p>
+    
+    <img src="{{ t.profile_image_url }}" alt="{{ t.from_user_name }}">
+    
+    &mdash; {{ t.from_user_name }} (@{{ t.from_user }}) <a href="https://twitter.com/{{ t.from_user }}/status/{{ t.id_str }}" data-datetime="{{ t.created_at|date("c") }}">{{ t.created_at|date("d M Y") }}</a>
+</blockquote>
+</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

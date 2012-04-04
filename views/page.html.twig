@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PHP Adelaide</title>
+        <title>{% block title %}PHP Adelaide{% endblock %}</title>
+        
+        <link rel="stylesheet" href="/static/css/reset.css" type="text/css" >
+        <link rel="stylesheet" href="/static/css/layout.css" type="text/css" >
+
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->        
     </head>
     <body>
-        
-        
-        
+        <header>
+            <dl>
+                <dt>Discuss:</dt>
+                <dd>Post on Twitter with your hash tag #phpadelaide</dd>
+                
+                <dt>Contact:</dt>
+                <dd>Email me at info[at]phpadelaide.net</dd>
+            </dl>
+        </header>
+        <div id="content">{% block content %}{% endblock %}</div>
     </body>
 </html>

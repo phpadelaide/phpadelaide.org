@@ -10,7 +10,13 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->get('/', function() use($app) { 
-    return $app['twig']->render('page.html.twig', array());
+    
+    $searchUrl = 'http://search.twitter.com/search.json?q=%23phpadelaide&rpp=10&include_entities=true&result_type=mixed';
+    $twitterResponse = json_decode(file_get_contents($searchUrl), true);
+    
+    return $app['twig']->render('index.html.twig', array(
+        'tweets' => $twitterResponse['results'],
+    ));
 }); 
 
 $app->run();
