@@ -1,6 +1,18 @@
 web1:
   name: phpadelaide
-  
+  default_gateway: index.php
+  php_extensions:
+     - intl
+     - mbstring
+     - xsl
+     - apc
+     - mysql
+     - posix
+     - iconv
+     - tokenizer
+     - xml
+     - pdo_mysql
+       
 db1:
   name: phpadelaide
   type: mysql
