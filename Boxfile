@@ -17,3 +17,9 @@ web1:
 db1:
   name: phpadelaide
   type: mysql
+
+worker1:
+  name: twitter
+  type: php
+  exec: worker/twitter.php
+  
