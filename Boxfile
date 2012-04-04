@@ -1,5 +1,6 @@
 web1:
   name: phpadelaide
+  document_root: web
   default_gateway: index.php
   php_extensions:
      - intl
@@ -16,6 +17,3 @@ web1:
 db1:
   name: phpadelaide
   type: mysql
-  
-worker1:
-  exec: "workers/twitter.php"  
